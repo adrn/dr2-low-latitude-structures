@@ -1,0 +1,103 @@
+\documentclass[modern]{aastex62}
+
+% TODO
+% ----
+
+% Style guidelines
+% ----------------
+% - Use the Makefile; don't be typing ``pdflatex'' or some bullshit.
+% - Wrap text to 80 character lines.
+% - Line break between sentences to make the git diffs readable.
+% - Use \, as a multiply operator.
+% - Reserve () for function arguments; use [] or {} for outer shit.
+% - Use \sectionname not Section, \figname not Figure, \documentname not Article
+
+\include{gitstuff}
+\include{preamble}
+\graphicspath{{figures/}}
+
+% Extra packages
+\usepackage{microtype}
+\usepackage{multirow}
+
+% Change the citation color or link color here:
+% \definecolor{linkcolor}{rgb}{0.02,0.35,0.55}
+% \definecolor{citecolor}{rgb}{0.4,0.4,0.4}
+
+\begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
+
+\title{Science stuff}
+
+\author[0000-0003-0872-7098]{Adrian~M.~Price-Whelan}
+\affiliation{Department of Astrophysical Sciences,
+             Princeton University, Princeton, NJ 08544, USA}
+
+% \author[0000-0002-5151-0006]{David~N.~Spergel}
+% \affiliation{Flatiron Institute,
+%              Simons Foundation,
+%              162 Fifth Avenue,
+%              New York, NY 10010, USA}
+% \affiliation{Department of Astrophysical Sciences,
+%              Princeton University, Princeton, NJ 08544, USA}
+
+\correspondingauthor{Adrian M. Price-Whelan}
+\email{adrn@astro.princeton.edu}
+
+\begin{abstract}
+% Context
+% Aims
+% Methods
+% Results
+% Conclusions
+\end{abstract}
+
+\keywords{
+    binaries: spectroscopic
+    ---
+    whatever
+}
+
+\section{Introduction}
+\label{sec:introduction}
+
+\section{Methods}
+\label{sec:methods}
+
+\section{Data}
+\label{sec:data}
+
+\acknowledgements
+
+It is a pleasure to thank ...
+
+\software{
+The code used in this project is available from \url{GITHUB URL} under the MIT
+open-source software license.
+This research utilized the following open-source \python\ packages:
+    \package{Astropy} \citep{Astropy-Collaboration:2013},
+    \package{astroquery} \citep{Ginsburg:2016},
+    \package{ccdproc} \citep{Craig:2015},
+    \package{celerite} \citep{Foreman-Mackey:2017},
+    \package{corner} \citep{Foreman-Mackey:2016},
+    \package{emcee} \citep{Foreman-Mackey:2013ascl},
+    \package{IPython} \citep{Perez:2007},
+    \package{matplotlib} \citep{Hunter:2007},
+    \package{numpy} \citep{Van-der-Walt:2011},
+    \package{scipy} (\url{https://www.scipy.org/}),
+    \package{sqlalchemy} (\url{https://www.sqlalchemy.org/}).
+% This work additionally used the Gaia science archive
+% (\url{https://gea.esac.esa.int/archive/}), and the SIMBAD database
+% \citep{Wenger:2000}).
+}
+
+% \facility{MDM: Hiltner (Modspec)}
+
+\appendix
+
+\section{Some extra stuff} % \label{appdx:}
+
+\clearpage
+\bibliographystyle{aasjournal}
+\bibliography{refs}
+
+\end{document}
