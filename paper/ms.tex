@@ -1,4 +1,4 @@
-\documentclass[modern]{aastex62}
+\documentclass[twocolumn]{aastex62}
 
 % TODO
 % ----
@@ -16,9 +16,12 @@
 \include{preamble}
 \graphicspath{{figures/}}
 
+\newcommand{\gaia}{\project{Gaia}}
+
 % Extra packages
 \usepackage{microtype}
 \usepackage{multirow}
+\usepackage{makecell}
 
 % Change the citation color or link color here:
 % \definecolor{linkcolor}{rgb}{0.02,0.35,0.55}
@@ -26,7 +29,7 @@
 
 \begin{document}\sloppy\sloppypar\raggedbottom\frenchspacing % trust me
 
-\title{Science stuff}
+\title{Gaia confirms a disk origin for distant, low-latitude stellar halo structures}
 
 \author[0000-0003-0872-7098]{Adrian~M.~Price-Whelan}
 \affiliation{Department of Astrophysical Sciences,
@@ -44,15 +47,27 @@
 \email{adrn@astro.princeton.edu}
 
 \begin{abstract}
-% Context
-% Aims
-% Methods
-% Results
-% Conclusions
+
+Several known stellar streams and over-densities in the Milky Way halo --- such
+as the so-called Triangulum-Andromeda, Monoceros ring, Galactic Anticenter
+Stellar Structure, and A13 --- have relatively low Galactic latitudes,
+relatively metal-rich stellar populations, and disk-like chemical abundance
+patterns.
+These results have therefore been used to suggest that the stars in these
+features originated in the Milky Way disk and were ``kicked out'' through
+dynamical perturbations from satellite galaxies.
+However, their extreme heights above the Galactic mid-plane (up to $\sim
+10~\kpc$) have raised questions about the plausibility of this scenario.
+Using kinematic measurements from the \gaia\ mission, we show that giant stars
+previously identified as probable members of these structures have disk-like
+kinematics.
+This confirms the origin of these features as having come from the Galactic
+disk and suggests...
+
 \end{abstract}
 
 \keywords{
-    binaries: spectroscopic
+    huh
     ---
     whatever
 }
@@ -60,11 +75,124 @@
 \section{Introduction}
 \label{sec:introduction}
 
+The stellar halo around the Milky Way is full of spatial and kinematic
+substructures \citep[e.g.,][]{TODO}.
+The discovery of the vast majority of these structures in the Milky Way halo was
+enabled by wide-field, multi-band photometry surveys like the Sloan Digital Sky
+Survey \cite[SDSS;][]{TODO}, Two Micron All-Sky Survey \citep[2MASS;][]{TODO},
+Pan-STARRS \citep[PS1;][]{TODO}, and the Dark Energy Survey
+\citep[DES;][]{TODO}.
+For example, the long tidal tails of known globular clusters such as the Palomar
+5 stream \citep{TODO}, long, thin, orphaned structures such as the GD-1 stream
+\citep{Grillmair:2006}, and dwarf galaxy streams such as
+the Orphan stream \citep{TODO} were all identified using some combination
+of these surveys.
+Detailed maps of stellar number counts from these surveys have also revealed the
+existence of amorphous stellar structures that typically span hundreds of square
+degrees on the sky.
+Subsequent follow-up of such structures, for example the Triangulum-Andromeda
+stellar clouds \citep[TriAnd;][]{TODO}, the Monoceros ring or Galactic
+Anticenter Stellar Structure \citep[Mon/GASS;][]{TODO}, and A13 \citep{TODO},
+revealed that stars in these structures tend to have similar metallicities and
+display coherent but higher dispersion internal kinematics as inferred from
+line-of-sight velocities \citep[e.g.,][]{Sheffield:TODO, Li:TODO}.
+From their observed properties (mainly their spatial distribution on the sky),
+Milky Way halo substructures are therefore typically classified into two broad
+morphological classes: ``streams'' --- long, relatively thin structures that
+exhibit coherent motion --- or ``blobs'' --- physically amorphous, less
+kinematically-coherent stellar over-densities.
+Importantly, however, recent evidence has shown that these classes do not
+uniquely map on to formation scenarios.
+
+Most of the known stellar streams are characterized as having metal poor stellar
+populations and are thus likely remnants of fully-disrupted or currently
+disrupting dwarf galaxies and globular clusters \citep{TODO}.
+Likewise, some diffuse stellar structures at high Galactic latitudes --- e.g.,
+the Hercules-Aquila cloud \citep{TODO} or the Virgo over-density \citep{TODO}
+--- are metal poor and may be ``shell''-like features that are seen around
+external galaxies \citep[e.g.,][]{Kado-Fong:TODO}, though here viewed from the
+inside.
+The joint existence of these stellar substructures and bound stellar satellites
+in the Galactic halo therefore appear to confirm the hierarchical nature of
+galaxy growth, an important test of cosmological models \citep{Bullock:TODO,
+TODO}.
+
+On the other hand, several lines of evidence have recently suggested that a
+number of low-latitude stream- and blob-like features may have instead
+originated from the Galactic disk rather than from an accreted system itself:
+\begin{description}
+    \item[Spatial distribution]
+        Along some sightlines toward the outer galaxy, Mon/GASS and other
+        structures appears to display an oscillatory pattern, over-dense above
+        the Galactic plane at some distances and below the plane at intermediate
+        distances \citep[e.g.,][]{Newberg:2002, Xu:2015, TODO}.
+        Stream-like features such as the Eastern Banded Structure
+        \citep[EBS;][]{TODO} and the Anti-Center Stream \citep[ACS;][]{TODO}
+        visually appear to emanate from the Galactic disk \citep[e.g., see
+        Figure~XX and text in ][]{Slater:TODO}.
+    \item[Stellar populations]
+        TriAnd, Mon/GASS, and A13 all appear to have relatively metal-rich
+        stellar populations, as evidenced by their lack of RR Lyrae-type stars
+        and abundance of more metal-rich giant stars \citep{Price-Whelan:2015,
+        Sheffield:TODO}.
+    \item[Chemical abundances]
+        Detailed chemical abundance measurements of giant stars in TriAnd and
+        A13 have shown that the abundance patterns of these structures are more
+        consistent with an extrapolation of the outer Milky Way disk rather than
+        any of the known dwarf galaxies \citep{Bergemann:2018, Hayes:2018}.
+    \item[Kinematics]
+        \todo{ACS and Mon/GASS: Kinematics of Monoceros from Gaia DR1 - Belokurov group \citep{deBoer:2018}, rotating like disk.}
+        TriAnd, Mon/GASS, and A13 seem to form a coherent kinematic trend in
+        line-of-sight velocity as a function of Galactic longitude \citep{TODO,
+        Johnston:2017}, however, full-space motions of stars in TriAnd and A13
+        have not yet been studied.
+\end{description}
+If confirmed, this .. exciting prospect because they trace ... Galactoseismology
+... reconstruct history of interaction and dark matter properties around disk...
+\citep[e.g.,][]{Chakrabarti:TODO, Laporte:TODO}.
+
+\citep[for a recent review, see][]{Johnston:2017}.
+
+Here we combine astrometry from \gaia\ with previously measured line-of-sight
+velocities to study the 3D kinematics of giant stars associated with the TriAnd
+and A13 structures.
+
+
+
+% \begin{center}
+%   \begin{tabular}{ r | c | c | c }
+%     \Xhline{2pt}
+%     \hspace{0em} & Stellar population & Chemistry & Kinematics\\
+%      \Xhline{1pt}
+%     EBS      & & & \\\Xhline{0.1pt}
+%     ACS      & & & \\\Xhline{0.1pt}
+%     Mon/GASS & \checkmark & & \checkmark \\\Xhline{0.1pt}
+%     A13      & \checkmark & \checkmark & \\\Xhline{0.1pt}
+%     TriAnd   & \checkmark & \checkmark & \\
+%     \Xhline{2pt}
+%   \end{tabular}
+% \end{center}
+
+
+% TODO: later, return and say "but Gaia has helped immensely - e.g., Price-Whelan:TODO, Koposov Orphan work, shell stuff?"
+
+
 \section{Methods}
 \label{sec:methods}
 
 \section{Data}
 \label{sec:data}
+
+\section{Discussion}
+\label{sec:discussion}
+
+Guillaume Thomas:
+% https://ui.adsabs.harvard.edu/#abs/2019MNRAS.483.3119T/abstract
+
+This thing:
+% https://ui.adsabs.harvard.edu/#abs/2018arXiv180707269F/abstract
+
+Xu et al. paper
 
 \acknowledgements
 
@@ -75,16 +203,12 @@ The code used in this project is available from \url{GITHUB URL} under the MIT
 open-source software license.
 This research utilized the following open-source \python\ packages:
     \package{Astropy} \citep{Astropy-Collaboration:2013},
-    \package{astroquery} \citep{Ginsburg:2016},
-    \package{ccdproc} \citep{Craig:2015},
-    \package{celerite} \citep{Foreman-Mackey:2017},
-    \package{corner} \citep{Foreman-Mackey:2016},
-    \package{emcee} \citep{Foreman-Mackey:2013ascl},
+    % \package{emcee} \citep{Foreman-Mackey:2013ascl},
     \package{IPython} \citep{Perez:2007},
     \package{matplotlib} \citep{Hunter:2007},
     \package{numpy} \citep{Van-der-Walt:2011},
-    \package{scipy} (\url{https://www.scipy.org/}),
-    \package{sqlalchemy} (\url{https://www.sqlalchemy.org/}).
+    % \package{scipy} (\url{https://www.scipy.org/}),
+    % \package{sqlalchemy} (\url{https://www.sqlalchemy.org/}).
 % This work additionally used the Gaia science archive
 % (\url{https://gea.esac.esa.int/archive/}), and the SIMBAD database
 % \citep{Wenger:2000}).
@@ -92,11 +216,12 @@ This research utilized the following open-source \python\ packages:
 
 % \facility{MDM: Hiltner (Modspec)}
 
-\appendix
+% \appendix
 
-\section{Some extra stuff} % \label{appdx:}
+% \section{Some extra stuff} % \label{appdx:}
 
-\clearpage
+% \clearpage
+
 \bibliographystyle{aasjournal}
 \bibliography{refs}
 
