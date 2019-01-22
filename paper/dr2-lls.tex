@@ -17,6 +17,9 @@
 \graphicspath{{figures/}}
 
 \newcommand{\gaia}{\project{Gaia}}
+\newcommand{\dr}[1]{\acronym{DR#1}}
+\newcommand{\bp}{\ensuremath{G_{\textrm{BP}}}}
+\newcommand{\rp}{\ensuremath{G_{\textrm{RP}}}}
 
 % Extra packages
 \usepackage{microtype}
@@ -198,12 +201,32 @@ In \sectionname~\ref{sec:methods} we ...
 %   \end{tabular}
 % \end{center}
 
-
-\section{Methods}
-\label{sec:methods}
-
 \section{Data}
 \label{sec:data}
+
+We compile catalogs of giant stars from recent spectroscopic surveys of TriAnd
+and A13 \citep{Sheffield:2014, Li:2017, Bergemann:2018} and cross-match these
+sources with \gaia\ data release 2 \citep[\dr{2};][]{TODO} using a positional
+search radius of 4\arcsec\ for \gaia\ sources with parallax $\varpi < 1~\mas$.
+In three instances, multiple \gaia\ source are returned within the search
+radius, so we choose the matched source with \rp\ magnitude closest to the
+$J$-band magnitude reported in the giant star catalogs.
+For TriAnd, the resulting catalog contains full phase-space (i.e. 3D position
+and velocity) information for 91 stars, 8 of which additionally have chemical
+abundance measurements from \citet{Bergemann:2018}.
+For A13, the resulting catalog contains full phase-space information for 53
+stars, 6 of which additionally have chemical abundance measurements from
+\citet{Bergemann:2018}.
+
+We determine distance estimates to the sources using the giant star absolute
+magnitude relation defined in \citet{Sheffield:2014}, and assume a metallicity
+$\feh = -0.6$ for all stars \citep[the TriAnd and A13 members with precise
+metallicity measurements show a dispersion comparable to the measurement
+uncertainty, meaning the metallicity dependence has a small effect on the
+distance uncertainty;][]{Bergemann:2018}.
+
+\section{Results}
+\label{sec:results}
 
 \section{Discussion}
 \label{sec:discussion}
